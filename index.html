@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Азимбек & Айпери | VIP Invitation</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #071b24;
+    color: #f8e6b0;
+    font-family: Georgia, serif;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.cover {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background:
+    linear-gradient(rgba(2,15,20,.82),rgba(2,15,20,.9)),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1200')
+    center/cover;
+}
+
+.small {
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: #e7c77c;
+    margin-bottom: 30px;
+}
+
+.envelope {
+    width: 290px;
+    height: 190px;
+    background: linear-gradient(135deg,#d8b56a,#94702e);
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 40px #d6b45d66;
+    transition: .8s;
+}
+
+.envelope:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+    border-top: 110px solid #f0d58c;
+    transform-origin: top;
+    transition: .8s;
+    z-index: 3;
+}
+
+.seal {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #102c32;
+    color: #e8cb82;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    z-index: 4;
+}
+
+.envelope.open:before {
+    transform: rotateX(180deg);
+}
+
+.envelope.open {
+    transform: translateY(20px);
+}
+
+.hint {
+    margin-top: 35px;
+    color: #e8d5a3;
+    letter-spacing: 2px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: .4; }
+}
+
+.invitation {
+    display: none;
+    padding: 30px 18px 50px;
+    animation: appear 2s ease;
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.frame {
+    max-width: 520px;
+    margin: auto;
+    padding: 35px 22px;
+    border: 1px solid #cba85d;
+    outline: 1px solid #cba85d55;
+    outline-offset: 8px;
+    background: linear-gradient(160deg,#102e36,#07191f);
+}
+
+.ornament {
+    font-size: 30px;
+    color: #d9b76c;
+    margin: 15px;
+}
+
+h1 {
+    font-size: 35px;
+    color: #f0d28b;
+    margin: 20px 0;
+    font-weight: normal;
+}
+
+h2 {
+    color: #e8c77d;
+    font-size: 23px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+p {
+    line-height: 1.9;
+    font-size: 16px;
+    color: #f5e9cc;
+}
+
+.gold {
+    color: #e6c276;
+}
+
+.photo {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 25px 0;
+    border: 2px solid #c6a45d;
+}
+
+.date {
+    font-size: 30px;
+    color: #f0cf7b;
+    margin: 20px;
+}
+
+.address {
+    margin: 20px 0;
+    padding: 18px;
+    border-top: 1px solid #b99754;
+    border-bottom: 1px solid #b99754;
+}
+
+.footer {
+    margin-top: 30px;
+    color: #e4c77e;
+    font-size: 19px;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="cover" id="cover">
+
+    <div class="small">EXCLUSIVE WEDDING INVITATION</div>
+
+    <div class="envelope" id="envelope" onclick="openInvitation()">
+        <div class="seal">A</div>
+    </div>
+
+    <div class="hint">✦ ЧАКЫРУУНУ АЧУУ ҮЧҮН БАCЫҢЫЗ ✦</div>
+
+    <p style="margin-top:30px;color:#d9bd7c">
+        AZIMBEK & AIPERI
+    </p>
+
+</section>
+
+<section class="invitation" id="invitation">
+
+<div class="frame">
+
+    <div class="ornament">✧ ❦ ✧</div>
+
+    <p class="gold">УРМАТТУУ КЛАССТАШТАР!</p>
+
+    <h1>Азимбек & Айпери</h1>
+
+    <img class="photo"
+    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000"
+    alt="Wedding">
+
+    <h2>Сиздерди күтөбүз!</h2>
+
+    <p>
+    Сиздерди биздин жашообуздагы эң кубанычтуу
+    күндөрдүн бири болгон үйлөнүү тоюбузга
+    жана жаңы үйүбүздүн кубанычын бөлүшүүгө
+    чын жүрөктөн чакырабыз!
+    </p>
+
+    <div class="ornament">❦</div>
+
+    <p class="gold">ТОЙ КҮНҮ</p>
+
+    <div class="date">25 НОЯБРЬ</div>
+
+    <p>2026-жыл</p>
+
+    <div class="address">
+
+        <h2>Дареги</h2>
+
+        <p>
+        Кара Жыгач айылы<br>
+        Жака-1<br>
+        <span class="gold">Той үйдө өтөт</span>
+        </p>
+
+    </div>
+
+    <img class="photo"
+    src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1000"
+    alt="Wedding decoration">
+
+    <h2>Той ээлери</h2>
+
+    <p class="gold">
+    Бубайым • Айгүл • Нуржигит
+    </p>
+
+    <div class="ornament">✧ ❦ ✧</div>
+
+    <p>
+    Кымбаттуу классташтар!<br>
+    Сиздердин келишиңиздер биз үчүн
+    чоң кубаныч жана сыймык!
+    </p>
+
+    <h2>Там той • Келин той</h2>
+
+    <div class="footer">
+        Сиздерди чыдамсыздык менен күтөбүз! ❤️
+    </div>
+
+</div>
+</section>
+
+<script>
+
+function openInvitation() {
+
+    const envelope = document.getElementById("envelope");
+    const cover = document.getElementById("cover");
+    const invitation = document.getElementById("invitation");
+    const music = document.getElementById("music");
+
+    envelope.classList.add("open");
+
+    music.play().catch(() => {});
+
+    setTimeout(() => {
+        cover.style.display = "none";
+        invitation.style.display = "block";
+        window.scrollTo(0,0);
+    }, 1100);
+
+}
+
+</script>
+
+</body>
+</html>
